@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookLink | Read Free Books</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">BOOKLINK</div>
+    <div class="nav-right">
+      <div class="notif">
+        <i class="fas fa-bell"></i>
+        <span id="notif-count"></span>
+      </div>
+      <input type="text" id="search-box" placeholder="Search books...">
+      <button id="search-btn"><i class="fas fa-search"></i></button>
+      <a href="profile.html" class="profile-btn"><i class="fas fa-user-alt"></i></a>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">HOME > BOOKS</div>
+
+  <!-- search results section, hidden until user searches -->
+  <section id="search-section" style="display:none;">
+    <h2 class="section-header">SEARCH RESULTS</h2>
+    <div class="slider" id="search-results"></div>
+  </section>
+
+  <!-- new updates / featured books -->
+  <section>
+    <h2 class="section-header">FEATURED BOOKS</h2>
+    <div class="slider" id="novel-slider">Loading books...</div>
+  </section>
+
+  <!-- reading history -->
+  <section>
+    <h2 class="section-header">HISTORY</h2>
+    <div id="history-list"></div>
+  </section>
+
+  <!-- ranking section -->
+  <section class="ranking-section">
+    <h2 class="section-header">RANKING</h2>
+    <div class="tabs">
+      <button class="tab active" id="trending-btn">TRENDING</button>
+      <button class="tab" id="topweek-btn">TOP WEEK</button>
+    </div>
+    <div class="slider" id="ranking-list">Loading ranking...</div>
+  </section>
+
+  <!-- sign up -->
+  <section>
+    <h2 class="section-header">Sign Up</h2>
+    <div class="auth-box">
+      <input type="email" id="signup-email" placeholder="Email">
+      <input type="password" id="signup-password" placeholder="Password">
+      <button id="signup-btn">Sign Up</button>
+    </div>
+  </section>
+
+  <!-- login -->
+  <section>
+    <h2 class="section-header">Login</h2>
+    <div class="auth-box">
+      <input type="email" id="login-email" placeholder="Email">
+      <input type="password" id="login-password" placeholder="Password">
+      <button id="login-btn">Login</button>
+      <button id="logout-btn">Logout</button>
+      <p id="user-status">Not logged in</p>
+    </div>
+  </section>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

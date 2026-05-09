@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookLink | Book</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">BOOKLINK</div>
+    <div class="nav-right">
+      <div class="notif">
+        <i class="fas fa-bell"></i>
+        <span id="notif-count"></span>
+      </div>
+      <input type="text" id="search-box" placeholder="Search books...">
+      <button id="search-btn"><i class="fas fa-search"></i></button>
+      <a href="profile.html" class="profile-btn"><i class="fas fa-user-alt"></i></a>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="index.html" style="color:#95a5a6; text-decoration:none;">HOME</a> > 
+    <a href="index.html" style="color:#95a5a6; text-decoration:none;">BOOKS</a> > 
+    <span id="book-breadcrumb">BOOK</span>
+  </div>
+
+  <!-- book info card at top -->
+  <div class="book-info-card" id="book-info">
+    <div class="book-cover-big">
+      <img id="book-cover-img" src="" alt="Book Cover">
+    </div>
+    <div class="book-details">
+      <h1 id="book-title-big">Loading...</h1>
+      <p id="book-author" class="book-meta"><i class="fas fa-user"></i> Loading author...</p>
+      <p id="book-subjects" class="book-meta"><i class="fas fa-tag"></i> </p>
+      <p id="book-description" class="book-desc">Loading description...</p>
+      <div class="book-actions">
+        <button id="bookmark-btn" onclick="bookmarkThisBook()">
+          <i class="fas fa-bookmark"></i> Bookmark
+        </button>
+        <a id="start-reading-btn" href="#chapters-section" class="read-start-btn">
+          <i class="fas fa-book-open"></i> Start Reading
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- chapters list -->
+  <section id="chapters-section">
+    <h2 class="section-header">CHAPTERS</h2>
+    <div id="chapters-list">Loading chapters...</div>
+  </section>
+
+  <script type="module" src="read.js"></script>
+</body>
+</html>

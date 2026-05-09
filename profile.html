@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookLink | Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">BOOKLINK</div>
+    <div class="nav-right">
+      <div class="notif">
+        <i class="fas fa-bell"></i>
+        <span id="notif-count"></span>
+      </div>
+      <input type="text" id="search-box" placeholder="Search books...">
+      <button id="search-btn"><i class="fas fa-search"></i></button>
+      <a href="profile.html" class="profile-btn"><i class="fas fa-user-alt"></i></a>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">HOME > PROFILE</div>
+
+  <div class="profile-menu-container">
+    <button class="menu-item active" onclick="showData('profile')">Profile</button>
+    <button class="menu-item" onclick="showData('bookmarks')">Bookmarks</button>
+    <button class="menu-item" onclick="showData('novels')">Book List</button>
+    <button class="menu-item" onclick="showData('history')">History</button>
+    <button class="menu-item" onclick="showData('notifications')">Notifications</button>
+    <button class="menu-item" onclick="showData('genre')">Dark Genre</button>
+    <button class="menu-item" onclick="showData('comments')">Comments</button>
+    <button class="menu-item" onclick="showData('reviews')">Reviews</button>
+    <button class="menu-item logout" id="logout-btn">Logout</button>
+  </div>
+
+  <div class="user-avatar-section">
+    <h3 id="view-title">USER PROFILE</h3>
+    <div id="view-content" class="avatar-placeholder">Loading your data...</div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookLink | Reading</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">BOOKLINK</div>
+    <div class="nav-right">
+      <div class="notif">
+        <i class="fas fa-bell"></i>
+        <span id="notif-count"></span>
+      </div>
+      <input type="text" id="search-box" placeholder="Search books...">
+      <button id="search-btn"><i class="fas fa-search"></i></button>
+      <a href="profile.html" class="profile-btn"><i class="fas fa-user-alt"></i></a>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="index.html" style="color:#95a5a6; text-decoration:none;">HOME</a> > 
+    <span id="chapter-book-title-crumb">BOOK</span> > 
+    <span id="chapter-title-crumb">CHAPTER</span>
+  </div>
+
+  <!-- chapter navigation at top -->
+  <div class="chapter-nav">
+    <button id="prev-chapter-btn" onclick="goToPrevChapter()">
+      <i class="fas fa-arrow-left"></i> Previous
+    </button>
+    <span id="chapter-title-display">Chapter</span>
+    <button id="next-chapter-btn" onclick="goToNextChapter()">
+      Next <i class="fas fa-arrow-right"></i>
+    </button>
+  </div>
+
+  <!-- book text area -->
+  <div class="reading-area">
+    <div id="chapter-text">Loading chapter text...</div>
+  </div>
+
+  <!-- chapter navigation at bottom too -->
+  <div class="chapter-nav">
+    <button id="prev-chapter-btn2" onclick="goToPrevChapter()">
+      <i class="fas fa-arrow-left"></i> Previous
+    </button>
+    <a id="back-to-book-btn" href="#" style="color:#95a5a6; font-size:13px;">
+      <i class="fas fa-list"></i> All Chapters
+    </a>
+    <button id="next-chapter-btn2" onclick="goToNextChapter()">
+      Next <i class="fas fa-arrow-right"></i>
+    </button>
+  </div>
+
+  <!-- comments section -->
+  <section class="comments-section">
+    <h2 class="section-header">COMMENTS</h2>
+
+    <!-- write a comment -->
+    <div class="comment-form">
+      <textarea id="comment-input" placeholder="Write your comment about this chapter..."></textarea>
+      <button id="post-comment-btn">Post Comment</button>
+    </div>
+
+    <!-- all comments show here -->
+    <div id="comments-list">Loading comments...</div>
+  </section>
+
+  <script type="module" src="chapter.js"></script>
+</body>
+</html>
