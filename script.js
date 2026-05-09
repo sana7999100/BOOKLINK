@@ -19,7 +19,7 @@ var auth = getAuth(app);
 var db = getFirestore(app);
 
 // gutenberg api - these are free public domain books
-// we use the gutendex api which is a free gutenberg search api
+
 var FEATURED_URL = "https://gutendex.com/books/?topic=fiction&languages=en";
 var TRENDING_URL = "https://gutendex.com/books/?topic=adventure&languages=en";
 var TOPWEEK_URL = "https://gutendex.com/books/?topic=mystery&languages=en";
